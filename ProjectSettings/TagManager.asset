@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - UIFramework
+  - Bridge
+  - AggressiveEnemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Ground
+  - WaterGround
+  - Bank
+  - PlayerBullet
+  - Enemy
+  - Player0Foot
+  - EnemyFoot
+  - EnemyBullet
+  - Ammo
+  - AirWall
+  - Player1Foot
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Particle
+    uniqueID: 1992669469
+    locked: 0
+  - name: Player
+    uniqueID: 471424925
+    locked: 0
+  - name: Forward
+    uniqueID: 1647524377
+    locked: 0
+  - name: Bullet
+    uniqueID: 1706976537
+    locked: 0
