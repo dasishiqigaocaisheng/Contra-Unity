@@ -1,0 +1,1 @@
+使用的时候，把本文件夹下面的log4net.dll**剪切**到Unity的**Plugins**文件夹下面

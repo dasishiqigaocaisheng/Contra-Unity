@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3a465b8fe51c40747bbd15cac39aa45d
+  m_SerializeEntries:
+  - m_GUID: a6dc2b7f21df0fa4d9753120dd6920e2
+    m_Address: FireballBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 7bf60100913af6344adab399125af6b6
+    m_Address: NormalBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 3db56d4e14ecada4b8098c2af66a3b01
+    m_Address: EnemyBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 715066c4fe872af489d9c064d48ba4cf
+    m_Address: LaserBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 8a288f0b1f2ea044e99c38ffad8531c4
+    m_Address: MachineBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 0d6f6a8f6bb508e4f97a577bcbb49fd0
+    m_Address: ShotgunBulletData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 2a18f4b30cf3cd74c9c3b4a373b513d0
+    m_Address: Assets/Data/Particle/Boom0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Effect
+  - m_GUID: bee4b516a1d8f884fab8415a0e8f1804
+    m_Address: Assets/Data/Particle/Boom1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Effect
+  - m_GUID: 53f74658f7fee8c4fabad559254a7bbb
+    m_Address: Assets/Data/Bullet/BulletData/RifleBulletData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 400fbd598f373224491643486ea30de2
+    m_Address: Assets/Data/Ammo/Rifle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ammo
+  - m_GUID: aa713d4f2051b3b4b81ce80ab4f853df
+    m_Address: Assets/Data/Ammo/Fireball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ammo
+  - m_GUID: c1518ed7785c641469578d639e03fa73
+    m_Address: Assets/Data/Ammo/Laser.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ammo
+  - m_GUID: 76dc3d36c124b5647b75c7b569dfbb36
+    m_Address: Assets/Data/Ammo/Shotgun.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ammo
+  - m_GUID: a1589d571f5f2294caab25a42c532e71
+    m_Address: Assets/Data/Ammo/Machine.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Ammo
+  - m_GUID: def99f63c3a30d34290e4bd44112dfb1
+    m_Address: FlyAmmoBox
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a4804b77716de604b916cfdda9b86c04
+    m_Address: Assets/Data/Bullet/BulletData/BossBulletData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - BulletData
+  - m_GUID: 49bb0531c3ea09d4eb4f1ff6a0f54e3a
+    m_Address: Assets/Data/Particle/BulletBoom.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Effect
+  - m_GUID: c1ce02a2f5ea387449b92e6ab2ad778b
+    m_Address: Assets/Data/Sound/BGM.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 31c46aa95cf8ecd40a650c03a388700f
+    m_Address: Assets/Data/Sound/Foot.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: cb48b584f78be644794ff83a4ed275dc
+    m_Address: Assets/Data/Sound/GameStart.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: c2444bf7e2a6c7c499133b29aa36ca32
+    m_Address: Assets/Data/Sound/Shoot.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: e5a8120512e059e4db69da808a02dcaa
+    m_Address: Assets/Data/Sound/Title.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 401c194f4db249f43a1141c0415b7c5a
+    m_Address: Assets/Data/Sound/Dead.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 25d7c7f5a9ab62a4fbd3d4ad6e3b2447
+    m_Address: Assets/Data/Sound/Effect0.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 1b051deed89ac5849877844bb690275f
+    m_Address: Assets/Data/Sound/Effect1.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: ed02f53641078ed45862699c42609d7b
+    m_Address: Assets/Data/Sound/Effect2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 94669d9d3a0386b4e92a2788280f6e75
+    m_Address: Assets/Data/Sound/Effect3.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: eddb5691dc46dc6408dfd0583bd4ee86
+    m_Address: Assets/Data/Sound/Fail.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 5058a3aa9ff0f32408f1efb459bbce86
+    m_Address: Assets/Data/Sound/ShootF.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 8aaab72ba3f50754c81f41f2fe5ce92f
+    m_Address: Assets/Data/Sound/ShootL.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 46ac329e84104e4438b6ccab0733b9c3
+    m_Address: Assets/Data/Sound/ShootM.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: e9856c8604517f84b9749ea6a9beb5ee
+    m_Address: Assets/Data/Sound/ShootS.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: ede6e6ab41b6d8b478b2dad924e0bde5
+    m_Address: Assets/Data/Sound/Boss.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 0eb56bed1ba9bd94593939413456a842
+    m_Address: Assets/Data/Sound/Success.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  - m_GUID: 1f89f2056857c4042bd61a9d14d5b4a7
+    m_Address: Assets/Data/Sound/Effect4.wav
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sound
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 695ea91709bf86c49a0b81f02015581c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: eae7378f9c0aa564ea7f6d8bd877d8f5, type: 2}
+    - {fileID: 11400000, guid: bd346351f3bd72445bd86279252ca441, type: 2}

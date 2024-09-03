@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RightGun
+  m_Controller: {fileID: 9100000, guid: 4720fb485b742fd4f927e63c35987154, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7c8c5604f2cfd9b47b909417d3ace492, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bfa3f7615d8293b4586ada483d99d4c2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8cecdc3aed871924f86d85866ce05f8d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2063ced81dbf42e4b8da080e0008af94, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b27f2fda10e6eba48888c52aa92f9352, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: be26d66fa2d4c0e43aeb7e8632f3cffd, type: 2}
