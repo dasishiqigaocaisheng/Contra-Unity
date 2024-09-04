@@ -10,7 +10,7 @@ using Contra.Network;
 
 namespace Contra.UI
 {
-    public class TitleCanvas : MonoBehaviour
+    public class TitleUI : MonoBehaviour
     {
         private List<GameObject> _Pages = new List<GameObject>();
 
@@ -70,12 +70,14 @@ namespace Contra.UI
                     GameMessage gm = new GameMessage { Type = 1 };
                     MessageManager.Inst.Send("Title", "GameManager", ref gm);
                 }
+                //Client Custom
                 else if (ActivePageIndex == 4)
                 {
                     InputField iptf = _Pages[ActivePageIndex].transform.Find("HostIP").GetComponent<InputField>();
-                    if (IPAddress.TryParse(iptf.text, out _))
+                    string[] strs = iptf.text.Split(":");
+                    if (strs.Length == 2 && IPAddress.TryParse(strs[0], out _) && ushort.TryParse(strs[1], out ushort port))
                     {
-                        GameMessage gm = new GameMessage { Type = 0, Msg0 = false, Msg1 = true, Msg2 = 1, Msg3 = iptf.text };
+                        GameMessage gm = new GameMessage { Type = 0, Msg0 = false, Msg1 = true, Msg2 = 1, Msg3 = strs[0], Msg4 = port };
                         MessageManager.Inst.Send("Title", "GameManager", ref gm);
                     }
                 }
@@ -168,7 +170,7 @@ namespace Contra.UI
                 //Client选中Host
                 case (2, _):
                     {
-                        GameMessage gm = new GameMessage { Type = 0, Msg0 = false, Msg1 = true, Msg2 = 1, Msg3 = MyNetworkManager.Inst.ServerFound[idx].Host };
+                        GameMessage gm = new GameMessage { Type = 0, Msg0 = false, Msg1 = true, Msg2 = 1, Msg3 = MyNetworkManager.Inst.ServerFound[idx].Host, Msg4 = (ushort)7777 };
                         MessageManager.Inst.Send("Title", "GameManager", ref gm);
                     }
                     break;

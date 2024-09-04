@@ -38,7 +38,7 @@ namespace Contra
         /// <summary>
         /// 在X轴上，两个玩家最多可以相距多远
         /// </summary>
-        public static float MaxDistance { get; set; }
+        //public static float MaxDistance { get; set; }
 
         /// <summary>
         /// 玩家的ID 
@@ -268,11 +268,11 @@ namespace Contra
                         }
                     }
 
-                    if (GameManager.Inst.IsTwoPlayers)
+                    /*if (GameManager.Inst.IsTwoPlayers)
                     {
                         if ((transform.position - Another.transform.position).x > MaxDistance && _VelocityVec.x > 0)
                             _VelocityVec.x = 0;
-                    }
+                    }*/
                     _Rgdb.velocity = _VelocityVec;
 
                     Vector2 face_to;
@@ -482,6 +482,7 @@ namespace Contra
                 rh2d = Physics2D.Raycast(new Vector2(x++, 20), Vector2.down, 100, LayerMask.GetMask("Ground"));
 
             //重生
+            NPlayer.SetPlayerActive(true);
             transform.position = new Vector3(rh2d.point.x, 20);
             _Rgdb.velocity = Vector2.zero;
             _Anim.SetBool("Dead", false);
@@ -493,7 +494,8 @@ namespace Contra
         [ClientRpc]
         public void BorrowLife()
         {
-            if (NetworkServer.active)
+            //只有没有生命的时候才可以借命
+            if (NetworkServer.active && LifeCount < 0)
                 _Rebirth();
             LifeCount++;
             GameUI.Inst.SetLifeCount(Another.PID, --Another.LifeCount);
@@ -518,6 +520,7 @@ namespace Contra
             _LostLife();
             NetPlayer.P1.PlaySound(SoundManager.SoundType.Other, "Dead", false);
 
+            //死亡后3s内无法借命
             DOVirtual.DelayedCall(3, () =>
             {
                 if (LifeCount >= 0)
@@ -526,6 +529,7 @@ namespace Contra
                 {
                     if (!GameManager.Inst.IsTwoPlayers || Another.LifeCount < 0)
                         NetPlayer.P1.GameEnd(false);
+                    NPlayer.SetPlayerActive(false);
                 }
                 CanRebirth = true;
             }).SetId(this);

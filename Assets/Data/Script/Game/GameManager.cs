@@ -149,8 +149,8 @@ namespace Contra
                     v.x = cam_width / 2;
                     tr.localPosition = v;
 
-                    if (IsTwoPlayers)
-                        Player.MaxDistance = cam_width - 2;
+                    //if (IsTwoPlayers)
+                    //    Player.MaxDistance = cam_width - 2;
 
                     StartCoroutine(__GameStartSoundPlay());
                 },
@@ -199,7 +199,12 @@ namespace Contra
                     IsTwoPlayers = gm.Msg1.Bool;
                     LocalPlayerNum = gm.Msg2.Int;
                     if (!IsHostMode)
+                    {
                         MyNetworkManager.Inst.networkAddress = gm.Msg3.String;
+                        (MyNetworkManager.Inst.transport as kcp2k.KcpTransport).Port = (ushort)gm.Msg4;
+                        //Debug.Log(gm.Msg3.String);
+                    }
+                    //MyNetworkManager.Inst.transport.
                     _FSMC.StateTransfer("Game");
                 });
             //当房间就绪时，Host开始游戏

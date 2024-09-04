@@ -15,7 +15,14 @@ namespace Contra
 
             Vector3 pos;
             if (GameManager.Inst.IsTwoPlayers)
-                pos = (Player.P1.transform.position + Player.P2.transform.position) / 2;
+            {
+                if (!Player.P1.IsDead && !Player.P2.IsDead)
+                    pos = (Player.P1.transform.position + Player.P2.transform.position) / 2;
+                else if (Player.P1.IsDead)
+                    pos = Player.P2.transform.position;
+                else
+                    pos = Player.P1.transform.position;
+            }
             else
                 pos = Player.P1.transform.position;
 

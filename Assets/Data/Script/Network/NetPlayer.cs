@@ -180,6 +180,16 @@ namespace Contra.Network
             ThisPlayer.Flash = value;
         }
 
+        /// <summary>
+        /// 设置Player是否处于Active状态
+        /// </summary>
+        /// <param name="value"></param>
+        [ClientRpc]
+        public void SetPlayerActive(bool value)
+        {
+            ThisPlayer.gameObject.SetActive(value);
+        }
+
         public void _OnMove(InputAction.CallbackContext cbc)
         {
             if (isOwned && PlayerControl)
