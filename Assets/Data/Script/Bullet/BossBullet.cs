@@ -1,4 +1,5 @@
 using UnityEngine;
+using Mirror;
 
 namespace Contra.Bullets
 {
@@ -8,7 +9,8 @@ namespace Contra.Bullets
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
-                EffectManager.Inst.PlayEffect("Boom0", transform.position);
+                if (NetworkServer.active)
+                    EffectManager.Inst.PlayEffect("Boom0", transform.position);
                 Destroy(gameObject);
             }
             else if (collision.gameObject.layer == LayerMask.NameToLayer("Player0"))

@@ -56,6 +56,7 @@ namespace Contra.Bridge
             }
         }
 
+        [ClientRpc]
         public void Boom()
         {
             StartCoroutine(_BridgeDestroy());
@@ -67,7 +68,7 @@ namespace Contra.Bridge
 
             //yield return new WaitForSeconds(0.4f);
 
-            NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect3", false);
+            SoundManager.Inst.Play(SoundManager.SoundType.Effect, "Effect3", false);
 
             _Boom0.transform.SetParent(null);
             _Boom0.Play();
@@ -92,7 +93,8 @@ namespace Contra.Bridge
             if (_Next != null)
                 _Next.Boom();
 
-            NetworkServer.Destroy(gameObject);
+            if (NetworkServer.active)
+                NetworkServer.Destroy(gameObject);
         }
     }
 }

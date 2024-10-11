@@ -75,3 +75,10 @@
 无论两台设备是否处于同一个局域网内，都可以使用该方式（但要确保两台设备可以无障碍地互相访问）。
 
 首先，一台设备要在菜单中选择`[2 PLAYERS] - [HOST]`充当Host。第二台设备在菜单中选择`[2 PLAYERS] - [CLIENT CUSTOM]`充当Client。然后在输入框内输入Host的IP地址与端口号，其中，IP地址应该为点分十进制，端口号与IP地址之间以`:`分隔（如：192.168.0.2:7777）。当输入完成后，Client按下确定键，此时Host设备上会显示Client的IP地址。最后，Host按下确定键来开始游戏。
+
+### 作弊码
+本游戏支持两个作弊码，任意玩家在游戏中的任意时刻输入以下序列即可生效（只对输入的玩家有效）
+* 30条命：<kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd><kbd>←</kbd><kbd>→</kbd><kbd>B</kbd><kbd>A</kbd>
+* 无敌：<kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd><kbd>←</kbd><kbd>→</kbd><kbd>A</kbd><kbd>A</kbd><kbd>A</kbd>
+
+注：<kbd>A</kbd>=攻击键，<kbd>B</kbd>=跳跃键
