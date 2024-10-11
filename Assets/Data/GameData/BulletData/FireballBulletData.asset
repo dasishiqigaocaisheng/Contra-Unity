@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Fireball
   Speed: 24
-  CD: 1
+  CD: 0.3
   IsPlayerBullet: 1
   IsHasGravity: 0
   Prefab: {fileID: 2550117136667256998, guid: 3cbaa956780c4e543bcd0f3820fa691d, type: 3}

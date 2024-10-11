@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using Modules.LogSystem;
 
 [CreateAssetMenu(fileName = "GlobalData", menuName = "ScriptableObject/GlobalData", order = 0)]
 public class GlobalData : ScriptableObject

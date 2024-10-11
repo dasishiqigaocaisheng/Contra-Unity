@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Machine
   Speed: 24
-  CD: 0.5
+  CD: 0.1
   IsPlayerBullet: 1
   IsHasGravity: 0
   Prefab: {fileID: 5349836527606490593, guid: fb7fb13a50457224fa52e1abef37bcbd, type: 3}

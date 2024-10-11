@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Mirror;
 using Modules.Utility;
 using Contra.Bullets;
+using Contra.Network;
 
 namespace Contra.AI
 {
@@ -115,7 +114,7 @@ namespace Contra.AI
                 _Cldr2D.enabled = false;
                 _Rgd2D.velocity = Vector2.up * 6;
                 _Rgd2D.gravityScale = 1;
-                SoundManager.Inst.Play(SoundManager.SoundType.Effect, "Effect0", false);
+                NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect0", false);
                 _NetAnim.SetTrigger("Dead");
             }
         }

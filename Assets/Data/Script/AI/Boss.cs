@@ -5,6 +5,7 @@ using DG.Tweening;
 using Modules.FSM;
 using Modules.LogSystem;
 using Modules.MessageSystem;
+using Mirror;
 using Contra.Network;
 
 namespace Contra.AI
@@ -133,14 +134,17 @@ namespace Contra.AI
                 });
 
             fsm.SetBeginPath("Sleep", (x) => GameManager.Inst.Started);
-            fsm.AddTransferPath("Sleep", "LeftFire", (x) => (transform.position - Player.P1.transform.position).x < 30);
+            fsm.AddTransferPath("Sleep", "LeftFire",
+                cond: (x) => transform.position.x - Player.ClosestAliveOne(transform.position).transform.position.x < 30,
+                transfer: (x) => NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Boss", false));
             fsm.AddTransferPath("LeftFire", "RightFire", FSM.ALWAYS);
             fsm.AddTransferPath("RightFire", "LeftFire", FSM.ALWAYS);
             fsm.AddTransferPath("LeftFire", "Broken", FSM.MANUAL);
             fsm.AddTransferPath("RightFire", "Broken", FSM.MANUAL);
             fsm.AddTransferPath("Broken", "Dead", FSM.ALWAYS);
 
-            _FSMC.Run();
+            if (NetworkServer.active)
+                _FSMC.Run();
 
             _HP = GlobalData.Inst.BossHP;
         }
@@ -149,6 +153,7 @@ namespace Contra.AI
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
             {
+                NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect1", false);
                 if (--_HP == 0)
                     _FSMC.StateTransfer("Broken");
             }

@@ -1,10 +1,8 @@
-using System;
 using System.Linq;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
+using Mirror;
+using Contra.Network;
 
 namespace Contra.Bridge
 {
@@ -15,7 +13,7 @@ namespace Contra.Bridge
         Tail
     }
 
-    public class BridgePart : MonoBehaviour
+    public class BridgePart : NetworkBehaviour
     {
         public BridgePartDef Type;
 
@@ -47,7 +45,7 @@ namespace Contra.Bridge
 
         private void Update()
         {
-            if (!GameManager.Inst.Started)
+            if (!NetworkServer.active || !GameManager.Inst.Started)
                 return;
 
             //只有Head才去判断是否自毁
@@ -69,7 +67,7 @@ namespace Contra.Bridge
 
             //yield return new WaitForSeconds(0.4f);
 
-            SoundManager.Inst.Play(SoundManager.SoundType.Effect, "Effect3", false);
+            NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect3", false);
 
             _Boom0.transform.SetParent(null);
             _Boom0.Play();
@@ -94,7 +92,7 @@ namespace Contra.Bridge
             if (_Next != null)
                 _Next.Boom();
 
-            Destroy(gameObject);
+            NetworkServer.Destroy(gameObject);
         }
     }
 }

@@ -1,15 +1,9 @@
-using System;
 using System.Linq;
-using System.Diagnostics;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using Modules.LogSystem;
 
 namespace Contra.UI
 {

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Shotgun
   Speed: 24
-  CD: 0.7
+  CD: 0.3
   IsPlayerBullet: 1
   IsHasGravity: 0
   Prefab: {fileID: 6344634032808568226, guid: 1c426274badcbe7448bb839c7c55813f, type: 3}

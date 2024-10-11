@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Mirror;
-using Modules.Utility.Singleton;
 
 public class EffectManager : NetworkBehaviour
 {

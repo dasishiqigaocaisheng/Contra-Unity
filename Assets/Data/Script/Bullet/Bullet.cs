@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Mirror;
-using DG.Tweening;
-using Contra.Network;
 
 namespace Contra.Bullets
 {

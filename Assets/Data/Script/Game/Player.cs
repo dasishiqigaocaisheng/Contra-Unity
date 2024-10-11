@@ -412,7 +412,7 @@ namespace Contra
                 else if (IsOnGround || IsInWater || IsOnBank)
                 {
                     if (IsOnGround && IsJumping)
-                        SoundManager.Inst.Play(SoundManager.SoundType.Other, "Foot", false);
+                        NPlayer.PlaySound(SoundManager.SoundType.Other, "Foot", false);
 
                     IsJumping = false;
                 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Laser
   Speed: 24
-  CD: 1
+  CD: 0.3
   IsPlayerBullet: 1
   IsHasGravity: 0
   Prefab: {fileID: 7399354021205985710, guid: a7bda13b5331fdf489b1fc5f50f4a10d, type: 3}

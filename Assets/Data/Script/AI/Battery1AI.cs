@@ -7,6 +7,7 @@ using Modules.FSM;
 using Modules.Utility;
 using Modules.LogSystem;
 using Contra.Bullets;
+using Contra.Network;
 
 namespace Contra.AI
 {
@@ -186,11 +187,11 @@ namespace Contra.AI
                 if (_HP == 0)
                 {
                     EffectManager.Inst.PlayEffect("Boom0", transform.position);
-                    SoundManager.Inst.Play(SoundManager.SoundType.Effect, "Effect3", false);
+                    NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect3", false);
                     NetworkServer.Destroy(gameObject);
                 }
                 else
-                    SoundManager.Inst.Play(SoundManager.SoundType.Effect, "Effect1", false);
+                    NetPlayer.P1.PlaySound(SoundManager.SoundType.Effect, "Effect1", false);
             }
         }
 

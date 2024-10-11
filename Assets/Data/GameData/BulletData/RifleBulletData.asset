@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rifle
   Speed: 24
-  CD: 0.7
+  CD: 0.2
   IsPlayerBullet: 1
   IsHasGravity: 0
   Prefab: {fileID: 5079194788985724404, guid: 752a92e271a767b4bbf35fc84375b80c, type: 3}

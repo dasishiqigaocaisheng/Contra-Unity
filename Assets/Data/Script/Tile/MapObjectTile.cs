@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.AddressableAssets;
 using Mirror;
 
 [CreateAssetMenu(fileName = "MapObjectTile", menuName = "2D/Tiles/MapObjectTile")]
